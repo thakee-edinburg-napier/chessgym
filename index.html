@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ChessGym</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components/sidenav/sidenav.css">
+</head>
+<body data-page="home" data-base=".">
+
+    <side-nav></side-nav>
+
+    <main class="page-content">
+        <section class="home-hero panel">
+            <div class="home-hero-main">
+                <h1 class="home-title">Welcome to ChessGym</h1>
+                <p class="home-subtitle">Train tactical puzzles, track progress, and improve decision speed with every session.</p>
+                <div class="home-actions">
+                    <a class="btn home-primary-link" href="pages/puzzles.html">Continue Training</a>
+                    <a class="btn" href="pages/stats.html">View Full Stats</a>
+                    <a class="btn" href="pages/settings.html">Settings</a>
+                </div>
+            </div>
+            <div class="home-snapshot">
+                <h2 class="panel-title">Today Snapshot</h2>
+                <table class="stats-table">
+                    <tbody>
+                        <tr><th scope="row">Attempts</th><td id="home-attempted">0</td></tr>
+                        <tr><th scope="row">Solved</th><td id="home-solved">0</td></tr>
+                        <tr><th scope="row">Accuracy</th><td id="home-accuracy">0%</td></tr>
+                        <tr><th scope="row">Avg. Solve Time</th><td id="home-average-time">0m 0s</td></tr>
+                    </tbody>
+                </table>
+                <p id="home-last-played" class="home-meta">Last activity: no sessions yet</p>
+            </div>
+        </section>
+
+        <section class="home-grid">
+            <section class="panel">
+                <h2 class="panel-title">Recent Activity</h2>
+                <p id="home-empty" class="muted-text">No puzzle attempts yet. Open the Puzzles page to get started.</p>
+                <ul id="home-recent-list" class="activity-list"></ul>
+            </section>
+
+            <section class="panel">
+                <h2 class="panel-title">Focus For Next Session</h2>
+                <ul class="home-focus-list">
+                    <li>Warm up with 3 quick puzzles.</li>
+                    <li>Maintain accuracy above 70%.</li>
+                    <li>Review failed attempts in Stats.</li>
+                </ul>
+                <p id="home-recent-count" class="home-meta">Recent attempts tracked: 0</p>
+            </section>
+        </section>
+
+        <section class="panel quick-links-panel">
+            <h2 class="panel-title">Quick Navigation</h2>
+            <div class="quick-links">
+                <a class="quick-link" href="pages/puzzles.html">Puzzles</a>
+                <a class="quick-link" href="pages/stats.html">Stats</a>
+                <a class="quick-link" href="pages/settings.html">Settings</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ------------------------------ Scripts ------------------------------ -->
+
+    <!-- Lucid Icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script src="components/sidenav/sidenav.js"></script>
+    <script src="app_state.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>

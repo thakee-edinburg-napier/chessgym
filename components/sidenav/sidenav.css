@@ -1,0 +1,75 @@
+.sidenav-container {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--sidenav-bg);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    border-right: 1px solid var(--sidenav-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+}
+
+.sidenav-logo-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #E8C547;
+}
+
+.sidenav-logo-text {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1.58rem;
+    font-weight: 700;
+    color: var(--sidenav-logo-text);
+}
+
+.sidenav-nav {
+    flex: 1;
+    padding: 0 1rem 1.5rem;
+    overflow-y: auto;
+}
+
+.sidenav-list {
+    list-style: none;
+}
+
+.sidenav-list li {
+    margin-bottom: 0.25rem;
+}
+
+.sidenav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.78rem 0.86rem;
+    color: var(--sidenav-link-text);
+    text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1.12rem;
+    border-radius: 0;
+    transition: background-color 0.15s ease;
+}
+
+.sidenav-link:hover {
+    background-color: var(--sidenav-link-hover);
+}
+
+.sidenav-link-active {
+    background-color: var(--sidenav-link-active-bg);
+}
+
+.sidenav-icon {
+    width: 1.62rem;
+    height: 1.62rem;
+    color: var(--sidenav-icon-color);
+    flex-shrink: 0;
+}

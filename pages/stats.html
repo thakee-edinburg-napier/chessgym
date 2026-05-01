@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats - ChessGym</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../components/sidenav/sidenav.css">
+</head>
+<body data-page="stats" data-base="..">
+
+    <side-nav></side-nav>
+    <main class="page-content">
+        <header class="page-header">
+            <h1 class="page-title">Stats</h1>
+            <p class="page-subtitle">Detailed performance for your recent puzzle sessions.</p>
+        </header>
+
+        <section class="panel" aria-label="Summary table">
+            <h2 class="panel-title">Performance Summary</h2>
+            <table class="stats-table">
+                <tbody>
+                    <tr><th scope="row">Attempted</th><td id="stats-attempted">0</td></tr>
+                    <tr><th scope="row">Solved</th><td id="stats-solved">0</td></tr>
+                    <tr><th scope="row">Failed Moves</th><td id="stats-failed">0</td></tr>
+                    <tr><th scope="row">Accuracy</th><td id="stats-accuracy">0%</td></tr>
+                    <tr><th scope="row">Total Mistakes</th><td id="stats-mistakes">0</td></tr>
+                    <tr><th scope="row">Average Solve Time</th><td id="stats-average-time">0m 0s</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="panel">
+            <h2 class="panel-title">Recent Trend</h2>
+            <p id="stats-trend" class="muted-text">Not enough data yet. Solve a few puzzles to see trends.</p>
+            <div class="graphs-grid">
+                <div class="graph-panel">
+                    <h3 class="graph-title">Recent Outcomes (last 12)</h3>
+                    <div id="stats-outcome-chart" class="bar-chart" aria-label="Recent outcomes chart"></div>
+                </div>
+                <div class="graph-panel">
+                    <h3 class="graph-title">Solve Time Trend (last 12)</h3>
+                    <div id="stats-time-chart" class="bar-chart" aria-label="Solve time chart"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2 class="panel-title">Recent Results</h2>
+            <p id="stats-empty" class="muted-text">No recent results. Play a puzzle to populate this list.</p>
+            <table id="stats-recent-table" class="stats-table stats-table-recent">
+                <thead>
+                    <tr>
+                        <th>Puzzle</th>
+                        <th>Mistakes</th>
+                        <th>Time</th>
+                        <th>Played At</th>
+                    </tr>
+                </thead>
+                <tbody id="stats-recent-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../components/sidenav/sidenav.js"></script>
+    <script src="../app_state.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

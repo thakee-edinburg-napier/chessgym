@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - ChessGym</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../components/sidenav/sidenav.css">
+</head>
+<body data-page="settings" data-base="..">
+
+    <side-nav></side-nav>
+    <main class="page-content">
+        <header class="page-header">
+            <h1 class="page-title">Settings</h1>
+            <p class="page-subtitle">Customize puzzle orientation, appearance, and local progress.</p>
+        </header>
+
+        <section class="panel">
+            <h2 class="panel-title">Preferences</h2>
+            <form id="settings-form" class="settings-form">
+                <div class="settings-group">
+                    <label class="settings-label" for="orientation-select">Board orientation</label>
+                    <select id="orientation-select" class="settings-select" name="boardOrientation">
+                        <option value="auto">Auto (based on puzzle side to move)</option>
+                        <option value="white">Always White at bottom</option>
+                        <option value="black">Always Black at bottom</option>
+                    </select>
+                    <p class="settings-help">Auto follows puzzle context. Fixed orientation keeps your chosen side at the bottom.</p>
+                </div>
+
+                <div class="settings-group">
+                    <label class="settings-label" for="theme-select">Theme</label>
+                    <select id="theme-select" class="settings-select" name="theme">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                    </select>
+                    <p class="settings-help">Theme changes are applied across Home, Stats, Puzzles, and Settings.</p>
+                </div>
+
+                <div class="settings-group">
+                    <label class="settings-label" for="board-theme-select">Board theme</label>
+                    <select id="board-theme-select" class="settings-select" name="boardTheme">
+                        <option value="classic">Classic</option>
+                        <option value="ocean">Ocean</option>
+                        <option value="forest">Forest</option>
+                        <option value="slate">Slate</option>
+                        <option value="sand">Sand</option>
+                    </select>
+                    <p class="settings-help">Board color theme applies to puzzle squares and saves to your local preferences.</p>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2 class="panel-title">Progress</h2>
+            <p class="settings-help">Reset clears local puzzle attempts, results, and timing data in this browser.</p>
+            <div class="settings-actions">
+                <button id="reset-progress-btn" type="button" class="btn btn-danger">Reset Progress</button>
+            </div>
+            <p id="settings-message" class="settings-message muted-text" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../components/sidenav/sidenav.js"></script>
+    <script src="../app_state.js"></script>
+    <script src="../main.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

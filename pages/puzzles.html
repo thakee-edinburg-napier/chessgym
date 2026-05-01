@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzles - ChessGym</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../components/sidenav/sidenav.css">
+    <link rel="stylesheet" href="puzzles.css">
+
+    <!-- ChessboardJS -->
+    <link rel="stylesheet"
+      href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css"
+      integrity="sha384-q94+BZtLrkL1/ohfjR8c6L+A6qzNH9R2hBLwyoAfu3i/WCvQjzL2RQJ3uNHDISdU"
+      crossorigin="anonymous">
+
+</head>
+<body data-page="puzzles" data-base="..">
+
+    <side-nav></side-nav>
+
+    <main class="page-content">
+        <div class="puzzle-layout">
+            <!-- Left: Board -->
+            <div class="puzzle-board-area">
+                <div class="puzzle-toolbar">
+                    <button id="puzzle-new-btn" type="button" class="puzzle-tool-btn">New Puzzle</button>
+                    <button id="puzzle-reset-btn" type="button" class="puzzle-tool-btn">Reset</button>
+                    <button id="puzzle-hint-btn" type="button" class="puzzle-tool-btn">Hint</button>
+                    <span id="puzzle-progress" class="puzzle-progress">Line progress: 0 / 0</span>
+                </div>
+                <div id="chess-board" class="puzzle-board"></div>
+            </div>
+
+            <!-- Right: Stats -->
+            <div class="puzzle-stats-container">
+                <div class="puzzle-panel-header">
+                    <h2 class="puzzle-panel-title">Puzzle Training</h2>
+                    <p id="puzzle-id" class="puzzle-id">Puzzle ID: —</p>
+                </div>
+
+                <div class="puzzle-info-cards">
+                    <div class="puzzle-info-card">
+                        <p class="puzzle-info-label">Side To Move</p>
+                        <p id="puzzle-to-move" class="puzzle-to-move">—</p>
+                    </div>
+                    <div class="puzzle-info-card">
+                        <p class="puzzle-info-label">How It Works</p>
+                        <p class="puzzle-help">
+                            Play the best move sequence. Wrong moves snap back so you can retry instantly.
+                        </p>
+                    </div>
+                    <div class="puzzle-info-card">
+                        <p class="puzzle-info-label">Session</p>
+                        <p id="puzzle-session-stats" class="puzzle-help">Played: 0 | Solved: 0 | Wrong moves: 0</p>
+                    </div>
+                    <div class="puzzle-info-card">
+                        <p class="puzzle-info-label">Hint</p>
+                        <p id="puzzle-hint-text" class="puzzle-help">Use Hint to reveal the next expected move.</p>
+                    </div>
+                </div>
+
+                <div id="puzzle-status" class="puzzle-status" aria-live="polite"></div>
+
+                <div class="puzzle-actions">
+                    <button id="puzzle-next-btn" type="button" class="puzzle-next-btn" style="display: none;">Next Puzzle</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="../components/sidenav/sidenav.js"></script>
+    <script src="../app_state.js"></script>
+    <script src="../main.js"></script>
+
+    <!-- ChessboardJS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"
+        integrity="sha384-8Vi8VHwn3vjQ9eUHUxex3JSN/NFqUg3QbPyX8kWyb93+8AC/pPWTzj+nHtbC5bxD"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" crossorigin="anonymous"></script>
+    <script src="puzzles.js"></script>
+</body>
+</html>
